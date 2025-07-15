@@ -2,10 +2,59 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 2rem;
     background-color: #f9f9f9;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+main {
+    flex: 1;
+    max-width: 800px;
+}
+
+.right-nav {
+    width: 250px;
+    margin-top: 4.5rem;
+    padding: 1.5rem;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.right-nav h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.right-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.right-nav li {
+    margin-bottom: 1rem;
+}
+
+.right-nav a {
+    display: block;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.right-nav p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.3rem;
 }
 
 header {
@@ -37,6 +86,7 @@ footer {
     border-top: 1px solid #eaeaea;
     font-size: 0.9rem;
     color: #7f8c8d;
+    clear: both;
 }
 
 a {
@@ -54,4 +104,16 @@ a:hover {
     border-top: 1px solid #eaeaea;
     margin-top: 2rem;
     padding-top: 1rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 900px) {
+    .page-container {
+        flex-direction: column;
+    }
+    
+    .right-nav {
+        width: auto;
+        margin-top: 2rem;
+    }
 }
